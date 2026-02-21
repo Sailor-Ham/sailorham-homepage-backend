@@ -1,0 +1,6 @@
+blank_issues_enabled: false
+
+contact_links:
+  - name: "💬 질문 및 자유 토론 (GitHub Discussions)"
+    url: "https://github.com/Sailor-Ham/sailorham-homepage-backend/discussions"
+    about: "버그나 기능 제안이 아닌, 단순 사용법 문의나 일반적인 토론은 여기서 진행해 주세요!"
