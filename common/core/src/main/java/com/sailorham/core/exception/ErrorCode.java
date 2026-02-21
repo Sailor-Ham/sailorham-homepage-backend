@@ -8,12 +8,9 @@ public interface ErrorCode {
 
     String getMessageKey();
 
-    String name();
-
     /**
-     * Enum 상수 이름(name)을 고유 비즈니스 에러 코드로 사용하기 위한 Default 메서드입니다.
+     * 고유 비즈니스 에러 코드를 반환합니다.
+     * Enum 기반 구현체는 {@code name()}을, 그 외 구현체는 자유롭게 정의할 수 있습니다.
      */
-    default String getCode() {
-        return this.name();
-    }
+    String getCode();
 }

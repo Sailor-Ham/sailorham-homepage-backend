@@ -8,6 +8,8 @@ import lombok.experimental.FieldDefaults;
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 public class BusinessException extends RuntimeException {
 
+    private static final Object[] EMPTY_ARGS = new Object[0];
+
     ErrorCode errorCode;
     Object[] args;
 
@@ -15,7 +17,7 @@ public class BusinessException extends RuntimeException {
 
         super(errorCode.getMessageKey());
         this.errorCode = errorCode;
-        this.args = new Object[0];
+        this.args = EMPTY_ARGS;
     }
 
     public BusinessException(ErrorCode errorCode, Object... args) {
@@ -29,6 +31,13 @@ public class BusinessException extends RuntimeException {
 
         super(errorCode.getMessageKey(), cause);
         this.errorCode = errorCode;
-        this.args = new Object[0];
+        this.args = EMPTY_ARGS;
+    }
+
+    public BusinessException(ErrorCode errorCode, Throwable cause, Object... args) {
+
+        super(errorCode.getMessageKey(), cause);
+        this.errorCode = errorCode;
+        this.args = args;
     }
 }
