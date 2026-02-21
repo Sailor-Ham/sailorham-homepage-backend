@@ -32,5 +32,4 @@ public record ApiResponse<T>(
     public static <T> ApiResponse<T> fail(ErrorCode errorCode, T data) {
         return new ApiResponse<>(false, errorCode.getCode(), null, data);
     }
-
 }

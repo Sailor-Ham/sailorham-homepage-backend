@@ -18,9 +18,4 @@ public enum GlobalErrorCode implements ErrorCode {
 
     HttpStatus status;
     String messageKey;
-
-    @Override
-    public String getCode() {
-        return this.name();
-    }
 }
