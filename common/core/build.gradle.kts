@@ -1,5 +1,11 @@
+plugins {
+    `java-library`
+}
+
 dependencies {
     implementation(platform(libs.spring.cloud.dependencies))
+
+    api(libs.spring.boot.starter.web)
 
     compileOnly(libs.lombok)
     annotationProcessor(libs.lombok)
